@@ -191,6 +191,15 @@ input:-webkit-autofill:focus {
 
 /* css for responsiveness */
 @media only screen and (max-width: 725px) {
+  /* layout start */
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .left {
+    display: none;
+  }
+  /* layout end */
   /* switch system start  */
   .switch-container {
     margin: 50% 5% auto 5%;
