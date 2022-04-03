@@ -1,0 +1,6 @@
+1) swtich content system with simple content
+2) add sign up and sign in form
+3) adding animation in input field 
+4) create container div and divide into 50% 50% (Two Column Layout)
+5) in left side div add background image , in right side div simply move your switch link and switch content 
+

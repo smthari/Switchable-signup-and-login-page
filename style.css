@@ -1,0 +1,206 @@
+/* basic styling  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* layout start */
+/* css for creating two column layout  */
+.container {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-columns: 50% 50%;
+}
+
+/* css for adding background image in left side  */
+.left {
+  background-color: #ffffff;
+  background-image: url(Images/background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* css for setting background for right side div */
+.right {
+  background: #3c3232;
+}
+/* layout end  */
+
+/* switch system start */
+/* css for styling the switchs */
+.switchs {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: max-content;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border-radius: 2rem;
+}
+
+/* css for styling the switchlink buttons */
+.switchlink {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  transition: 0.3s;
+}
+
+/* Change background color of switchlink buttons on hover */
+.switchlink:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current switchlink class */
+.switchlink.active {
+  background-color: #ccc;
+}
+
+/* adding margin to center a switch content  */
+.switch-container {
+  margin: 20% 15% auto 15%;
+}
+
+/* Style the switchcontent */
+.switchcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+/* fade effect animation  on switchcontent  */
+.switchcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* styling title  */
+.title {
+  margin-bottom: 3rem;
+  color: #eee;
+  font-size: 2.5rem;
+}
+
+/* switch system end */
+
+/* sign up and login form start */
+/* styling field-wrap div */
+.field-wrap {
+  position: relative;
+  height: 5rem;
+  line-height: 44px;
+}
+
+/* css for label  */
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 1.2rem;
+}
+
+/* css for input field */
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #6e6a6a;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+input:invalid {
+  outline: 0;
+}
+
+input:focus,
+input:valid {
+  border-color: #ccc;
+}
+
+/* css for moving label to above the input field on focus and valid  */
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 10px;
+  top: -2rem;
+  color: #ccc;
+}
+
+/* css for input autofill  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* css for forgot link */
+.forgot {
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+
+.forgot a {
+  color: #eee;
+  text-decoration: none;
+  font-size: italic;
+}
+
+/* css for action button  */
+.actionbtn {
+  padding: 0.7rem;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.actionbtn:hover {
+  background-color: #ccc;
+}
+
+/* sign up and login form end */
+
+/* css for responsiveness */
+@media only screen and (max-width: 725px) {
+  /* layout start */
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .left {
+    display: none;
+  }
+  /* layout end */
+
+  /* switch system start  */
+  .switch-container {
+    margin: 50% 5% auto 5%;
+  }
+  /* switch system end  */
+}
